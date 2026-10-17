@@ -1,0 +1,109 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Systolic growth in every genus"
+  description: >-
+    Formalization of the lower bound 4/3 for the limit inferior of the
+    supremal hyperbolic systole in genus g divided by log g. The proof
+    combines arithmetic hyperbolic surfaces, uniform representations by
+    comparable prime cubes, and surface gluing followed by a smooth
+    conformal change to curvature minus one that preserves the systole
+    lower bound. The result holds in the limit over all genera.
+  authors: ["Nihar Gargava"]
+  responsible_maintainers: ["Nihar Gargava"]
+  license: "Apache-2.0"
+
+classification:
+  arxiv: ["math.DG", "math.NT"]
+  msc2020: ["53C22", "32G15", "11P32"]
+
+sources:
+  - title: "Gluing hyperbolic surfaces with large systoles"
+    authors: ["Bram Petri", "Mingkun Liu", "Nihar Gargava", "Yifei Cai"]
+    type: "other"
+    relationship: "formalizes"
+    location: "Theorem 1.1 and the every-genus Buser--Sarnak construction"
+    note: >-
+      The formalized headline statement is the 4/3 limit-inferior bound.
+      The analytic and gluing constructions are adapted as described under fidelity.
+  - title: "On the period matrix of a Riemann surface of large genus"
+    authors: ["Peter Buser", "Peter Sarnak"]
+    type: "paper"
+    relationship: "background"
+    note: "Arithmetic surfaces supplying the logarithmic systole lower bound."
+  - title: "Diophantine equations in the primes"
+    authors: ["Brian Cook", "Ákos Magyar"]
+    id: "https://arxiv.org/abs/1312.6309"
+    type: "paper"
+    relationship: "background"
+    note: "The proof uses a specialized cubic prime-representation input, not the complete general-polynomial theorem."
+
+related_formalizations:
+  - id: "https://github.com/will1491/RiemannDynamics/tree/b3fa37cc0f18a23ea66b654ea3f73eb472129010"
+    relationship: "adapts"
+    note: "Hyperbolic polygon and isometry-classification slices; provenance and modifications are in Code-Attribution.md."
+  - id: "https://github.com/TauCetiProject/TauCeti/tree/4d898cf1e30951c7c13845c1ef043ad9415b6aca"
+    relationship: "adapts"
+    note: "Universal-cover construction; additional imported revisions and slices are recorded in Code-Attribution.md."
+
+status:
+  scope: >-
+    The advertised claim is the unconditional 4/3 limit-inferior lower bound
+    for the supremum of systoles of closed oriented hyperbolic surfaces.
+    The original Lean v4.33.0-rc1 development and full build are verified.
+    This repository's v4.35.0-rc2 module-system port passes its full build and
+    direct Solution check, with only the three standard axioms. Local Comparator
+    verification confirms exact statement matching and acceptance by Lean,
+    NanoDa and con-ron. No publication, registry submission or Palomar review
+    has occurred. Supremum attainment and the
+    research draft's exact thirteen-block decomposition are not advertised results.
+    The independent Challenge contains its authorized statement-only placeholder;
+    the proof development and Solution contain no placeholders.
+  # Count proof files only, excluding the independent Challenge statement.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+
+automation:
+  methods:
+    - method: "agent"
+      framework: "OpenAI Codex"
+      tool_setup: "Human-directed Lean proof development with parallel agents and kernel verification."
+      prompting_notes: "Complete the theorem without unproved inputs; preserve statements; reuse attributed code; improve readability."
+  spend_usd: "not tracked"
+  notes: >-
+    Nihar Gargava directed the mathematical and implementation goals.
+    Codex agents developed Lean proofs, consulted references, adapted
+    attributed source slices, and ran Lean checks. Historical model and
+    cost details were not reconstructed.
+
+fidelity:
+  divergences: >-
+    The analytic implementation uses at least 33 comparable prime-cube
+    summands and chain gluing rather than claiming the draft's thirteen-block
+    proposition verbatim. A smooth conformal construction supplies the
+    final constant-curvature metric. Sys is defined as a supremum, and no
+    claim of attainment is used. These changes preserve the advertised
+    4/3 limit-inferior statement.
+
+review:
+  status: "self-assessed"
+  notes: >-
+    The original and ported public theorems and their assembled inputs were
+    checked by Lean, with only the three standard axioms. No separate human
+    peer review or Palomar review is claimed. Local Comparator verification
+    passed with Lean, NanoDa and con-ron; no registration or submission has occurred.
+
+alignment:
+  namespace: "SystolicGrowth"
+  statements:
+    - source: "Gluing hyperbolic surfaces with large systoles, Theorem 1.1"
+      lean: "SystolicGrowth.systolic_growth_lower_bound"
+      module: "Solution"
+      status: "proved; exact statement matching and Lean, NanoDa, con-ron checks passed locally"
+      note: "Exactly the limit-inferior inequality with Sys defined as the supremal genus-g systole."
+
+acknowledgements: >-
+  Lean, mathlib and the authors of the reused formalizations listed in
+  Code-Attribution.md. Their source licenses and attribution are retained.

@@ -1,0 +1,59 @@
+# Lean and Lake build output
+.lake/
+/build/
+/lake-packages/
+*.olean
+*.ilean
+*.olean.server
+*.ir
+*.trace
+*.prof
+
+# Local Codex/agent state
+/.agents/
+/.codex/
+/.aws/
+
+# Python and Sage caches used by exploratory scripts
+__pycache__/
+*.py[cod]
+*.sage.py
+.pytest_cache/
+.mypy_cache/
+.venv/
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Generated local checkpoint archives; retain manifests and checksums
+/checkpoints/*.tar.gz
+
+# Private papers and TeX manuscript sources
+papers/
+**/papers/
+tex/
+**/tex/
+*.pdf
+*.tex
+*.bib
+*.sty
+*.cls
+*.bst
+
+# TeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
