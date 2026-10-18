@@ -19,14 +19,6 @@ classification:
   msc2020: ["53C22", "32G15", "11P32"]
 
 sources:
-  - title: "Gluing hyperbolic surfaces with large systoles"
-    authors: ["Bram Petri", "Mingkun Liu", "Nihar Gargava", "Yifei Cai"]
-    type: "other"
-    relationship: "formalizes"
-    location: "Main lower bound and the every-genus Buser--Sarnak construction"
-    note: >-
-      The formalized headline statement is the 4/3 limit-inferior bound.
-      The analytic and gluing constructions are adapted as described under fidelity.
   - title: "On the period matrix of a Riemann surface of large genus"
     authors: ["Peter Buser", "Peter Sarnak"]
     type: "paper"
