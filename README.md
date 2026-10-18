@@ -8,6 +8,7 @@ genus. Writing `Sys(g)` for the supremum of these systoles, the result is
 $$
 \liminf_{g\to\infty}\frac{\mathrm{Sys}(g)}{\log g}\geq\frac43.
 $$
+
 This is based on the onging work of Yifei Cai, Nihar Gargava and Mingkun Liu.
 The above result improves on previous results of Petri-Liu, Katz-Sabourau and Cai.
 
