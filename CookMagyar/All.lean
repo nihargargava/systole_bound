@@ -51,9 +51,9 @@ Chebyshev bounds, uniformly in the moving target.
 solution.  Everything from that solution to the genus decomposition is
 elementary arithmetic and is proved here.
 
-The normalization by `24` is integral at every odd integer.  It lets the
-congruence in the draft disappear from the downstream genus bookkeeping:
-the Cook--Magyar target `T` is `24 * q`, and the target used below is `q`.
+The normalization by `24` is integral at every odd integer.  The
+Cook--Magyar target `T` is `24 * q`, so the genus bookkeeping can use `q`
+directly.
 
 The remaining analytic development has three successive estimates: the
 von-Mangoldt major-arc asymptotic uniform in `T/N^3`, uniform positivity of
@@ -185,8 +185,7 @@ theorem oddPrimeSolution_nonempty_of_cubicRepresentation
     equation := heq }⟩
 
 /-- No coordinate of a solution in the chosen target window can be much
-smaller than the ambient scale.  This is the contradiction argument from
-Section 3.6 of the draft, with cube roots eliminated. -/
+smaller than the ambient scale.  The contradiction argument avoids cube roots. -/
 theorem OddPrimeSolution.lower_cube
     {n N T : ℕ} (hn : 1 ≤ n) (hN : 1 ≤ N)
     (s : OddPrimeSolution n N T) (hw : CookMagyarWindow n N T)
@@ -263,7 +262,7 @@ theorem OddPrimeSolution.target_le_four_mul_primeCubic
 
 /-- The exact target-uniform prime-representation consequence needed from
 Cook--Magyar, together with the local-density and prime-power-removal
-arguments in the draft.
+arguments proved in this development.
 
 For fixed `n`, `threshold n` is chosen before the varying target `q`.  The
 returned scale places `T = 24q` in a fixed compact normalized-target window,

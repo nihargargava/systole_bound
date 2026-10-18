@@ -296,10 +296,9 @@ end ClosedHyperbolicSurface
 def systoleSpectrum (g : ℕ) : Set ℝ :=
   Set.range (fun X : ClosedHyperbolicSurface g ↦ X.systole)
 
-/-- The supremal systole in genus `g`, denoted `Sys(g)` in the draft.
+/-- The supremal systole in genus `g`, denoted `Sys(g)`.
 
-For `g ≥ 2`, the standard compactness/properness result on moduli space says
-that this supremum is attained, so it agrees with the draft's maximum. -/
+The definition uses a supremum directly; no attainment claim is needed. -/
 noncomputable def Sys (g : ℕ) : ℝ :=
   sSup (systoleSpectrum g)
 

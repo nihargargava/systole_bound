@@ -37,7 +37,6 @@ Thumbs.db
 # Generated local checkpoint archives; retain manifests and checksums
 /checkpoints/*.tar.gz
 
-# Private papers and TeX manuscript sources
 papers/
 **/papers/
 tex/

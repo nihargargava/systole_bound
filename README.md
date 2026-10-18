@@ -8,8 +8,6 @@ $$
 \liminf_{g\to\infty}\frac{\mathrm{Sys}(g)}{\log g}\geq\frac43.
 $$
 
-This is a formal verification of a theorem that is going to appear in an upcoming preprint to be written by Yifei Chai, Nihar Gargava and Minkun Liu.
-
 ## Read the proof
 
 The main result and its assembly are developed in

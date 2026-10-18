@@ -18,15 +18,15 @@ This file separates the proof into three layers:
 2. `CookMagyar.lean` derives `UniformCookMagyarInput`, a bounded decomposition
    of every large genus into comparable arithmetic genera, from a
    target-uniform prime-representation input.
-3. `GeometricInput` packages the internal geometric construction from the
-   draft: join the bounded family along a chain and retain the desired
+3. `GeometricInput` packages the geometric construction used here: join the
+   bounded family along a chain and retain the desired
    systolic lower bound.
 
 The arithmetic and geometric paper inputs are kept as explicit parameters.
 All asymptotic bookkeeping in this file is proved from those parameters.
 
-Two repairs to the draft are important for that eventual formalization.
-First, the glued compact surface is *locally* CAT(-1) (equivalently, its
+Two geometric details are important. First, the glued compact surface is
+*locally* CAT(-1) (equivalently, its
 universal cover is CAT(-1)); it cannot itself be a nontrivial compact CAT(-1)
 space.  Second, the proof should organize a geodesic by genuine transitions
 between punctured components, not claim that every contact with a seam is
@@ -40,7 +40,7 @@ noncomputable def targetSystole (C : ℝ) (g : ℕ) : ℝ :=
   (4 / 3 : ℝ) * Real.log g - 2 * Real.log (Real.log g) - C
 
 /-- The geometric consequence of the Brooks--Buser--Sarnak construction used
-in the draft.
+here.
 
 The integer `h` fixes one arithmetic family.  For every prime `p > 3`, the
 input gives a concrete closed hyperbolic surface of genus
@@ -214,7 +214,7 @@ theorem systole_le_Sys (geo : GeometricInput) {g : ℕ} (hg : 2 ≤ g)
 /-! ### Assembly of the two inputs -/
 
 /-- Buser--Sarnak plus Cook--Magyar give the quantitative surface-existence
-statement appearing in Theorem 1.1 of the draft. -/
+statement needed for the main lower bound. -/
 theorem quantitative_surface_bound_of_inputs
     (geo : GeometricInput) (bs : BuserSarnakInput)
     (cm : UniformCookMagyarInput bs.h) :
@@ -318,7 +318,7 @@ theorem normalized_lower_bound_of_inputs
   exact htarget_g.le.trans
     ((div_le_div_iff_of_pos_right hlog_g).2 hquantitative_g)
 
-/-- The draft's main liminf theorem, reduced to the Buser--Sarnak and
+/-- The main liminf theorem, reduced to the Buser--Sarnak and
 Cook--Magyar inputs. -/
 theorem main_theorem_of_inputs
     (geo : GeometricInput) (bs : BuserSarnakInput)

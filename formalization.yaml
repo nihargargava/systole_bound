@@ -23,7 +23,7 @@ sources:
     authors: ["Bram Petri", "Mingkun Liu", "Nihar Gargava", "Yifei Cai"]
     type: "other"
     relationship: "formalizes"
-    location: "Theorem 1.1 and the every-genus Buser--Sarnak construction"
+    location: "Main lower bound and the every-genus Buser--Sarnak construction"
     note: >-
       The formalized headline statement is the 4/3 limit-inferior bound.
       The analytic and gluing constructions are adapted as described under fidelity.
@@ -55,9 +55,9 @@ status:
     This repository's v4.35.0-rc2 module-system port passes its full build and
     direct Solution check, with only the three standard axioms. Local Comparator
     verification confirms exact statement matching and acceptance by Lean,
-    NanoDa and con-ron. No publication, registry submission or Palomar review
-    has occurred. Supremum attainment and the
-    research draft's exact thirteen-block decomposition are not advertised results.
+    NanoDa and con-ron. No publication, registration, or completed external
+    review is claimed. Neither supremum attainment nor a thirteen-block
+    decomposition is an advertised result.
     The independent Challenge contains its authorized statement-only placeholder;
     the proof development and Solution contain no placeholders.
   # Count proof files only, excluding the independent Challenge statement.
@@ -81,8 +81,7 @@ automation:
 fidelity:
   divergences: >-
     The analytic implementation uses at least 33 comparable prime-cube
-    summands and chain gluing rather than claiming the draft's thirteen-block
-    proposition verbatim. A smooth conformal construction supplies the
+    summands and chain gluing. A smooth conformal construction supplies the
     final constant-curvature metric. Sys is defined as a supremum, and no
     claim of attainment is used. These changes preserve the advertised
     4/3 limit-inferior statement.
@@ -92,13 +91,13 @@ review:
   notes: >-
     The original and ported public theorems and their assembled inputs were
     checked by Lean, with only the three standard axioms. No separate human
-    peer review or Palomar review is claimed. Local Comparator verification
+    peer review is claimed. Local Comparator verification
     passed with Lean, NanoDa and con-ron; no registration or submission has occurred.
 
 alignment:
   namespace: "SystolicGrowth"
   statements:
-    - source: "Gluing hyperbolic surfaces with large systoles, Theorem 1.1"
+    - source: "Main systolic-growth lower bound"
       lean: "SystolicGrowth.systolic_growth_lower_bound"
       module: "Solution"
       status: "proved; exact statement matching and Lean, NanoDa, con-ron checks passed locally"

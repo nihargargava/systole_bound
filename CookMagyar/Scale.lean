@@ -15,7 +15,7 @@ for which
 
 For large `T`, minimality forces `T/N³` into the compact interval
 `[n-1/3, n-1/5]`.  This is the integer-only version of the ceiling/cube-root
-choice in the draft.
+choice used in the scale selection.
 -/
 
 /-- The compact normalized-target window
