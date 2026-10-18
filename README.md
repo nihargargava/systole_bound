@@ -8,6 +8,11 @@ $$
 \liminf_{g\to\infty}\frac{\mathrm{Sys}(g)}{\log g}\geq\frac43.
 $$
 
+The autoformalization was done with the help of Codex running various version of ChatGPT.
+Most of the code was written by ChaGPT 6.1 Sol with various proof outlines written by ChatGPT Astra 6.0.
+The proof itself was based on a candidate construction given by ChatGPT 5.6.
+The formalization took >7 days of agents working in total over a period of a few weeks. 
+
 ## Read the proof
 
 The main result and its assembly are developed in
