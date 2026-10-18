@@ -41,3 +41,10 @@ bash scripts/verify-comparator.sh
 
 `lake build` checks the project. The Comparator script checks the formalized
 main result with Lean's kernel and the bundled independent proof checkers.
+
+## Palomar submission
+
+This repository has been verified by the Palomar project. 
+What this means is that some robots agree that the claimed theorem is indeed what has been formalized by the code.
+
+
