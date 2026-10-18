@@ -7,11 +7,12 @@ project:
     This repository introduces and formally proves the lower bound 4/3 for
     the limit inferior of the supremal hyperbolic systole in genus g divided
     by log g. At present, this formalization is the theorem's only public
-    statement and proof. The cited papers below are background sources for
-    ingredients, not prior publications of the main theorem. The proof
-    combines arithmetic hyperbolic surfaces, uniform representations by
-    comparable prime cubes, and surface gluing followed by a smooth conformal
-    change to curvature minus one that preserves the systole lower bound.
+    statement and proof. This metadata records the result as an original proof;
+    the published papers below are cited only as background for ingredients.
+    The proof combines arithmetic hyperbolic surfaces, uniform representations
+    by comparable prime cubes, and surface gluing followed by a smooth
+    conformal change to curvature minus one that preserves the systole lower
+    bound.
   authors: ["Nihar Gargava"]
   responsible_maintainers: ["Nihar Gargava"]
   license: "Apache-2.0"
@@ -21,6 +22,15 @@ classification:
   msc2020: ["53C22", "32G15", "11P32"]
 
 sources:
+  - title: "The 4/3 systolic-growth lower bound"
+    authors: ["Nihar Gargava"]
+    type: "original-proof"
+    relationship: "other"
+    note: >-
+      Original statement and proof introduced in this formalization; there is
+      no separate publication or preprint. The main declaration is
+      SystolicGrowth.systolic_growth_lower_bound in Solution.lean.
+    author_endorsement: "participated"
   - title: "On the period matrix of a Riemann surface of large genus"
     authors: ["Peter Buser", "Peter Sarnak"]
     type: "paper"
@@ -45,8 +55,8 @@ status:
   scope: >-
     The main result introduced here is the unconditional 4/3 limit-inferior
     lower bound for the supremum of systoles of closed oriented hyperbolic
-    surfaces. It is currently public only as this formalization; the listed
-    sources are background references, not sources for the main theorem.
+    surfaces. It is currently public only as this formalization; the original
+    proof entry records the theorem, while published papers are background.
     The original Lean v4.33.0-rc1 development and full build are verified.
     This repository's v4.35.0-rc2 module-system port passes its full build and
     direct Solution check, with only the three standard axioms. Local Comparator
@@ -93,7 +103,7 @@ review:
 alignment:
   namespace: "SystolicGrowth"
   statements:
-    - source: "Main systolic-growth lower bound"
+    - source: "The 4/3 systolic-growth lower bound"
       lean: "SystolicGrowth.systolic_growth_lower_bound"
       module: "Solution"
       status: "proved; exact statement matching and Lean, NanoDa, con-ron checks passed locally"
