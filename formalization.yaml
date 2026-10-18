@@ -4,12 +4,14 @@ version: "v0.4"
 project:
   name: "Systolic growth in every genus"
   description: >-
-    Formalization of the lower bound 4/3 for the limit inferior of the
-    supremal hyperbolic systole in genus g divided by log g. The proof
+    This repository introduces and formally proves the lower bound 4/3 for
+    the limit inferior of the supremal hyperbolic systole in genus g divided
+    by log g. At present, this formalization is the theorem's only public
+    statement and proof. The cited papers below are background sources for
+    ingredients, not prior publications of the main theorem. The proof
     combines arithmetic hyperbolic surfaces, uniform representations by
-    comparable prime cubes, and surface gluing followed by a smooth
-    conformal change to curvature minus one that preserves the systole
-    lower bound. The result holds in the limit over all genera.
+    comparable prime cubes, and surface gluing followed by a smooth conformal
+    change to curvature minus one that preserves the systole lower bound.
   authors: ["Nihar Gargava"]
   responsible_maintainers: ["Nihar Gargava"]
   license: "Apache-2.0"
@@ -41,15 +43,17 @@ related_formalizations:
 
 status:
   scope: >-
-    The advertised claim is the unconditional 4/3 limit-inferior lower bound
-    for the supremum of systoles of closed oriented hyperbolic surfaces.
+    The main result introduced here is the unconditional 4/3 limit-inferior
+    lower bound for the supremum of systoles of closed oriented hyperbolic
+    surfaces. It is currently public only as this formalization; the listed
+    sources are background references, not sources for the main theorem.
     The original Lean v4.33.0-rc1 development and full build are verified.
     This repository's v4.35.0-rc2 module-system port passes its full build and
     direct Solution check, with only the three standard axioms. Local Comparator
     verification confirms exact statement matching and acceptance by Lean,
-    NanoDa and con-ron. No publication, registration, or completed external
-    review is claimed. Neither supremum attainment nor a thirteen-block
-    decomposition is an advertised result.
+    NanoDa and con-ron. No separate peer-review approval is claimed. Neither
+    supremum attainment nor a thirteen-block decomposition is part of the
+    formalized result.
     The independent Challenge contains its authorized statement-only placeholder;
     the proof development and Solution contain no placeholders.
   # Count proof files only, excluding the independent Challenge statement.
@@ -75,16 +79,16 @@ fidelity:
     The analytic implementation uses at least 33 comparable prime-cube
     summands and chain gluing. A smooth conformal construction supplies the
     final constant-curvature metric. Sys is defined as a supremum, and no
-    claim of attainment is used. These changes preserve the advertised
-    4/3 limit-inferior statement.
+    claim of attainment is used. These choices establish the 4/3
+    limit-inferior statement.
 
 review:
   status: "self-assessed"
   notes: >-
     The original and ported public theorems and their assembled inputs were
     checked by Lean, with only the three standard axioms. No separate human
-    peer review is claimed. Local Comparator verification
-    passed with Lean, NanoDa and con-ron; no registration or submission has occurred.
+    peer-review approval is claimed. Local Comparator verification passed
+    with Lean, NanoDa and con-ron.
 
 alignment:
   namespace: "SystolicGrowth"
