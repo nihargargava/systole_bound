@@ -1,5 +1,6 @@
 # Systolic growth in every genus
 
+
 This repository contains a Lean proof that the largest possible systole of a
 closed oriented hyperbolic surface grows at least logarithmically with its
 genus. Writing `Sys(g)` for the supremum of these systoles, the result is
@@ -7,6 +8,9 @@ genus. Writing `Sys(g)` for the supremum of these systoles, the result is
 $$
 \liminf_{g\to\infty}\frac{\mathrm{Sys}(g)}{\log g}\geq\frac43.
 $$
+This is based on the onging work of Yifei Cai, Nihar Gargava and Mingkun Liu.
+The above result improves on previous results of Petri-Liu, Katz-Sabourau and Cai.
+
 
 The autoformalization was done with the help of Codex running various version of ChatGPT.
 Most of the code was written by ChaGPT 6.1 Sol with various proof outlines written by ChatGPT Astra 6.0.
