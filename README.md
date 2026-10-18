@@ -4,9 +4,9 @@ This repository contains a Lean proof that the largest possible systole of a
 closed oriented hyperbolic surface grows at least logarithmically with its
 genus. Writing `Sys(g)` for the supremum of these systoles, the result is
 
-\[
+$$
 \liminf_{g\to\infty}\frac{\operatorname{Sys}(g)}{\log g}\geq\frac43.
-\]
+$$
 
 This is a formal verification of a theorem that is going to appear in an upcoming preprint to be written by Yifei Chai, Nihar Gargava and Minkun Liu.
 
