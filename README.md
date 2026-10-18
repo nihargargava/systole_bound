@@ -55,6 +55,7 @@ main result with Lean's kernel and the bundled independent proof checkers.
 ## Palomar submission
 
 This repository has been verified by the Palomar project. 
-What this means is that some robots agree that the claimed theorem is indeed what has been formalized by the code.
+What this means is that some robots agree that the claimed theorem is indeed what has been formalized by the code. 
+Here is the [link to Palomar](https://palomar-registry.org/entry?id=PALOMAR-2026-10-18-000028&version=1).
 
 
